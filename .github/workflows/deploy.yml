@@ -1,0 +1,31 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - main  # Триггер на пуш в ветку main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # Используйте Ubuntu для выполнения шагов
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up SSH
+      uses: webfactory/ssh-agent@v0.5.3
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+    - name: Deploy to server
+      run: |
+        ssh -o StrictHostKeyChecking=no ${{ secrets.USERNAME }}@${{ secrets.SERVER_IP }} << 'EOF'
+          cd ~/matchMeSite
+          git pull origin main
+          npm install
+          npm run build
+          sudo rm -rf ${{ secrets.SERVER_PATH }}/*
+          sudo cp -r dist/* ${{ secrets.SERVER_PATH }}
+          sudo service nginx restart
+        EOF
