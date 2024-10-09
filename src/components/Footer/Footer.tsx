@@ -1,8 +1,9 @@
 import { Divider } from "@nextui-org/divider";
-import { Link, User } from "@nextui-org/react";
+import { Link as NextUILink, User } from "@nextui-org/react"; // Переименуйте Link из NextUI
 import { useTranslation } from "react-i18next";
 import LangSwitcher from "../../locales/LangSwitcher/LangSwitcher";
 import { useState, useEffect } from "react";
+import { Link as ScrollLink } from "react-scroll"; // Переименуйте Link из react-scroll
 
 const Footer = () => {
     const { t } = useTranslation();
@@ -20,7 +21,7 @@ const Footer = () => {
     }, []);
 
     return (
-        <div className="footer">
+        <div className="footer" id="contacts">
             <div className="container">
                 <div className="footer__wrapper">
                     <div className="footer__flex">
@@ -30,18 +31,23 @@ const Footer = () => {
                             </div>
                         )}
                         <div className="menu">
-                            <a className="menu__item" href="#">
+                            <ScrollLink
+                                className="menu__item"
+                                to="about-bot" // это id целевого блока
+                                smooth={true} // добавляем плавный скролл
+                                duration={1000} // время скролла в миллисекундах
+                            >
                                 {t("menu.aboutBot")}
-                            </a>
-                            <a className="menu__item" href="#">
+                            </ScrollLink>
+                            <ScrollLink className="menu__item" to="functions" smooth={true} duration={1000}>
                                 {t("menu.features")}
-                            </a>
-                            <a className="menu__item" href="#">
+                            </ScrollLink>
+                            <ScrollLink className="menu__item" to="advantages" smooth={true} duration={1000}>
                                 {t("menu.advantages")}
-                            </a>
-                            <a className="menu__item" href="#">
+                            </ScrollLink>
+                            <ScrollLink className="menu__item" to="contacts" smooth={true} duration={1000}>
                                 {t("menu.contacts")}
-                            </a>
+                            </ScrollLink>
                         </div>
                         {isDesktop === "" && (
                             <a className="telegram-button" href="https://t.me/MatchMeDatingbot">
@@ -79,9 +85,9 @@ const Footer = () => {
                                         <User
                                             name={t("footer.developerName")}
                                             description={
-                                                <Link href="https://t.me/nikita_frl" size="sm" isExternal>
+                                                <NextUILink href="https://t.me/nikita_frl" size="sm" isExternal>
                                                     @nikita_frl
-                                                </Link>
+                                                </NextUILink>
                                             }
                                             avatarProps={{
                                                 src: "/images/myphoto.jpeg",

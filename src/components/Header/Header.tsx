@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-scroll"; // Импортируем Link из react-scroll
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -41,10 +42,9 @@ const Header = () => {
     useEffect(() => {
         const handleResize = () => {
             const width = window.innerWidth;
-            const language = i18n.language; // Получаем текущий язык
+            const language = i18n.language;
 
             if (language === "en") {
-                // Проверяем, если текущий язык английский
                 if (width <= 436) {
                     setIsDesktop("mobile");
                 } else if (width >= 437 && width <= 768) {
@@ -53,7 +53,6 @@ const Header = () => {
                     setIsDesktop("");
                 }
             } else {
-                // Если язык не английский, используем предыдущую логику
                 setIsDesktop(width < 768 && width > 490 ? "laptop" : width <= 490 ? "mobile" : "");
             }
         };
@@ -73,18 +72,23 @@ const Header = () => {
                                 <img src="/images/logo.png" alt="" />
                             </div>
                             <div className="menu">
-                                <a className="menu__item" href="#">
+                                <Link
+                                    className="menu__item"
+                                    to="about-bot" // это id целевого блока
+                                    smooth={true} // добавляем плавный скролл
+                                    duration={1000} // время скролла в миллисекундах
+                                >
                                     {t("menu.aboutBot")}
-                                </a>
-                                <a className="menu__item" href="#">
+                                </Link>
+                                <Link className="menu__item" to="functions" smooth={true} duration={1000}>
                                     {t("menu.features")}
-                                </a>
-                                <a className="menu__item" href="#">
+                                </Link>
+                                <Link className="menu__item" to="advantages" smooth={true} duration={1000}>
                                     {t("menu.advantages")}
-                                </a>
-                                <a className="menu__item" href="#">
+                                </Link>
+                                <Link className="menu__item" to="contacts" smooth={true} duration={1000}>
                                     {t("menu.contacts")}
-                                </a>
+                                </Link>
                             </div>
                             <a className="telegram-button" href="https://t.me/MatchMeDatingbot">
                                 <img src="/images/telegram-icon.svg" alt="" />

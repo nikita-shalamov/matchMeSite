@@ -7,7 +7,7 @@ const Functions = React.memo(() => {
     const { t } = useTranslation();
     return (
         <div>
-            <div className="functions">
+            <div className="functions" id="functions">
                 <div className="container">
                     <div className="functions__wrapper">
                         <h2 className="block-title">{t("functions-title")}</h2>

@@ -28,7 +28,7 @@ const About = () => {
     }, []);
 
     return (
-        <div className="about">
+        <div className="about" id="about-bot">
             <div className="container">
                 <div className="about__wrapper">
                     <img className="about__heart" src="/images/heart.png" alt="" />
@@ -36,7 +36,7 @@ const About = () => {
                     <div className="about__flex">
                         <div className="about__col">
                             <div className="about__text">
-                                <span>MatchMe7</span> {t("aboutBot")}
+                                <span>MatchMe</span> {t("aboutBot")}
                             </div>
                         </div>
                         {displaySize !== "mobile" && (

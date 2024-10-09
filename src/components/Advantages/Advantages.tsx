@@ -13,7 +13,7 @@ const Advantages = () => {
 
     return (
         <div>
-            <div className="advantages">
+            <div className="advantages" id="advantages">
                 <div className="container">
                     <div className="advantages__wrapper">
                         <h2 className="block-title">{t("advantagesTitle")}</h2>

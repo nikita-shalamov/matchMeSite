@@ -15,6 +15,9 @@
             @apply w-8;
         }
     }
+    &__item {
+        @apply cursor-pointer
+    }
     &__mobile {
         // @apply px-5 py-3 pb-6;
         &-wrapper {
