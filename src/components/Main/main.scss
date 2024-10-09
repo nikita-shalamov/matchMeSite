@@ -1,0 +1,18 @@
+.main {
+    @apply h-auto;
+    .container {
+        @apply h-full;
+    }
+    &__wrapper {
+        @apply p-10
+    }
+    &__label {
+        @apply bg-indigo-400 text-white w-fit rounded-md py-1 px-2 mt-0 mx-auto
+    }
+    &__text {
+        @apply text-xl mt-6 text-center max-w-[700px] mx-auto
+    }
+    &__picture {
+        @apply block mx-auto w-[380px] mt-14 mb-10
+    }
+}

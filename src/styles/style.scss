@@ -1,0 +1,38 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+$text-color: "#FAABFF";
+$bg-color: '#6743FF';
+$icon-color: "#FAABFF";
+$slogan-color: "#ffbfff";
+
+html {
+    font-family: 'Raleway', sans-serif;
+    background: #f3f3f3 !important;
+  }
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+    @apply w-[1200px] mx-auto bg-white rounded-xl overflow-hidden w-full sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[1140px] 2xl:w-[1320px] !important;
+    
+}
+
+.block-title {
+  @apply block text-center w-full pt-8 pb-4 font-semibold text-4xl;
+}
+
+.bg-default-100 {
+  background-color: transparent !important;
+}
+
+@import './buttons.scss';
+@import '../components/Header/header.scss';
+@import '../components/Main/main.scss';
+@import '../components/Functions/functions.scss';
+@import '../components/Footer/footer.scss';
+@import '../components/About/about.scss';
+@import '../components/Advantages/advantages.scss';

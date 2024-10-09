@@ -1,0 +1,56 @@
+.footer {
+    @apply mt-5 mb-5 text-white;
+    &__wrapper {
+        @apply py-5 px-3 bg-slate-900;
+    }
+    &__flex {
+        @apply flex gap-4 justify-between;
+    }
+    &__descr {
+        @apply flex text-sm text-center justify-between;
+    }
+    &__mobile-logo {
+        @apply flex justify-start gap-5
+    }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+    .footer {
+        &__descr {
+            @apply block;
+        }
+        &__mobile-logo {
+            @apply mb-5
+        }
+        &__flex {
+            @apply justify-center
+        }
+    }
+    
+}
+
+@media (max-width: 639px) {
+    .footer {
+        .container {
+            border-radius: 0 !important;
+        }
+        @apply mb-0;
+        &__descr {
+            @apply block;
+        }
+        &__mobile-logo {
+            @apply mb-5
+        }
+        &__flex {
+            @apply justify-center
+        }
+    }
+    
+}
+
+.col {
+    @apply flex gap-5 font-medium;
+    &.link {
+        @apply underline mt-2;
+    }
+}

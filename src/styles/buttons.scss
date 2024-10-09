@@ -1,0 +1,25 @@
+
+.telegram-button {
+    @apply w-fit rounded-xl h-[48px] px-4 py-3 bg-[#24A1DE] flex gap-2 text-white font-medium whitespace-nowrap;
+    box-shadow: 0 0 10px rgba(36, 161, 222, 0.5), 0 0 20px rgba(36, 161, 222, 0.4); /* Голубое свечение */
+    transition: box-shadow 0.3s ease; /* Плавный переход для эффекта наведения */
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .telegram-button {
+        @apply h-[40px] px-2 py-1 flex items-center text-sm font-semibold;  /* Увеличенные размеры на экранах от 768px */
+        img {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .telegram-button {
+        @apply h-[40px] px-2 py-1 flex items-center text-sm font-semibold;  /* Увеличенные размеры на экранах от 768px */
+        img {
+            @apply w-6
+        }
+    }
+}
+

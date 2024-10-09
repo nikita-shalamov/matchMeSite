@@ -1,0 +1,74 @@
+.functions {
+    @apply mt-5 mb-5;
+    &__items-block {
+        @apply flex justify-center gap-20 w-[300px];
+    }
+    &__video {
+        @apply max-w-[300px] h-[475px] rounded-md overflow-hidden object-cover;
+        &-wrapper {
+            @apply bg-slate-200 p-4 w-fit h-[507px] rounded-xl;
+        }
+    }
+    &__tabs {
+        @apply flex w-full flex-col pb-7;
+    }
+    &__points {
+        @apply w-[30%];
+    }
+    &__tab {
+        @apply flex justify-evenly mt-8
+    }
+    &__tab-switcher {
+        @apply font-medium text-base px-5 py-5 text-start justify-start
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .functions {
+        &__points {
+            @apply w-[40%]
+        }
+    }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+    .functions {
+        @apply px-3;
+        &__points {
+            @apply w-[260px]
+        }
+        &__video {
+            @apply max-w-[210px] h-[332.5px];
+            &-wrapper {
+                @apply p-3 h-[358px] rounded-md;
+            }
+        }
+        &__descr {
+            @apply text-base;
+        }
+        &__tab {
+            @apply flex justify-between mt-5
+        }
+        &__tabs {
+            @apply px-4
+        }
+        &__items-block {
+            @apply block w-auto
+        }
+    }
+}
+
+@media (max-width: 639px) {
+    .functions {
+        @apply px-3;
+        &__points {
+            @apply w-full
+        }
+        &__descr {
+            @apply text-base w-full;
+        }
+        &__tabs {
+            @apply px-5
+        }
+    }
+}

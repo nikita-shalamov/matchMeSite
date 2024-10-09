@@ -1,0 +1,67 @@
+.advantages {
+    &__wrapper {
+        @apply px-10 pb-7;
+    }
+    &__cards {
+        @apply mt-4 grid grid-cols-4 gap-x-4;
+    }
+    &__card {
+        @apply p-4 rounded-xl border border-bg-color;
+        img {
+            width: 27px;
+        }
+    }
+    &__title {
+        @apply font-semibold text-lg mt-2;
+    }
+    &__descr {
+        @apply text-base mt-1;
+    }
+    &__telegram-button {
+        @apply mx-auto mt-8;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .advantages {
+        &__wrapper {
+            @apply px-8 pb-7;
+        }
+        &__cards {
+            @apply grid-cols-2 gap-4;
+        }
+    }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+    .advantages {
+        &__wrapper {
+            @apply px-4 pb-7;
+        }
+        &__cards {
+            @apply grid-cols-2 gap-4;
+        }
+    }
+}
+
+@media (max-width: 639px) {
+    .advantages {
+        &__wrapper {
+            @apply px-4 pb-7;
+        }
+        &__cards {
+            @apply grid-cols-2 gap-4;
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .advantages {
+        &__wrapper {
+            @apply px-4 pb-7;
+        }
+        &__cards {
+            @apply grid-cols-1 gap-4;
+        }
+    }
+}
