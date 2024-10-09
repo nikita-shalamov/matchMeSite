@@ -31,9 +31,10 @@ jobs:
         ssh -o StrictHostKeyChecking=no ${{ secrets.USERNAME }}@${{ secrets.SERVER_IP }} << 'EOF'
           cd ~/matchMeSite
           git pull origin main
-          sudo npm install --verbose
-          sudo npm run build --verbose
+          npm install --verbose
+          npm run build --verbose
           sudo rm -rf ${{ secrets.SERVER_PATH }}/*
           sudo cp -r dist/* ${{ secrets.SERVER_PATH }}
           sudo service nginx restart
         EOF
+
