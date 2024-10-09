@@ -4,7 +4,7 @@
         @apply overflow-visible !important
     }
     &__wrapper {
-        @apply relative
+        @apply relative pb-5
     }
     &__heart {
         @apply top-[-40px] right-[-40px] absolute w-[100px]
