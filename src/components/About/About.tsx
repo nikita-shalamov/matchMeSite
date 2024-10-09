@@ -36,7 +36,7 @@ const About = () => {
                     <div className="about__flex">
                         <div className="about__col">
                             <div className="about__text">
-                                <span>MatchMe6</span> {t("aboutBot")}
+                                <span>MatchMe7</span> {t("aboutBot")}
                             </div>
                         </div>
                         {displaySize !== "mobile" && (
