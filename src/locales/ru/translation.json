@@ -48,13 +48,15 @@
         "title": "Фото из телеграм в касание",
         "key": "telegramPhotos",
         "points": ["Все фотографии из профиля можно в касание загрузить в MatchMe.", "Загрузка до 9 фотографий.", "Поддержка всех популярных типов."],
-        "video": "/videos/addTelegramPhoto.mp4"
+        "video": "/videos/addTelegramPhoto.mp4",
+        "preview": "/images/videoPreview/addTelegramPhotoPreview.png"
     },
     {
       "title": "Свайпы анкет",
       "key": "swipesProfile",
       "points": ["Легко листайте анкеты — свайп вправо для лайка, свайп влево для пропуска.", "Свайпая анкеты, сразу видите фотографии, возраст и краткую информацию о человеке."],
-      "video": "/videos/profileSwipes.mp4"
+      "video": "/videos/profileSwipes.mp4",
+      "preview": "/images/videoPreview/profileSwipesPreview.png"
     },
     {
         "title": "Просмотр лайков",
@@ -64,13 +66,15 @@
             "Смотрите взаимные лайки в чатах. Там же можно сразу написать.",
             "В меню снизу новые лайки будут отображаться в виде уведомлений"
         ],
-        "video": "/videos/myLikes.mp4"
+        "video": "/videos/myLikes.mp4",
+        "preview": "/images/videoPreview/myLikesPreview.png"
     },
     {
         "title": "Чаты в приложении",
         "key": "chatsInApp",
         "points": ["Общайтесь с пользователями, с которыми у вас произошел матч, прямо в приложении.", "Получайте новые сообщения в боте"],
-        "video": "/videos/sendMessage.mp4"
+        "video": "/videos/sendMessage.mp4",
+        "preview": "/images/videoPreview/sendMessagePreview.png"
     }
     
 ],

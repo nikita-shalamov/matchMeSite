@@ -7,6 +7,7 @@ interface tabsTypes {
     points: string[];
     title: string;
     video: string;
+    preview: string;
 }
 const FunctionsTabs = () => {
     // const tabs = [
@@ -45,7 +46,9 @@ const FunctionsTabs = () => {
     const tabs = useMemo(() => t("tabs", { returnObjects: true }) as tabsTypes[], [t]);
 
     const [sel, setSel] = useState<Key | string>("telegramPhotos");
-    const [curValue, setCurValue] = useState<{ points: string[]; video: string }>();
+    const [curValue, setCurValue] = useState<{ points: string[]; video: string; preview: string }>();
+
+    console.log(curValue);
 
     useEffect(() => {
         setCurValue(tabs.find((item) => item.key === String(sel)));
@@ -84,7 +87,7 @@ const FunctionsTabs = () => {
                 <div className="functions__items-block">
                     <div className="functions__video-wrapper">
                         {curValue && curValue.video && (
-                            <video key={curValue.video} autoPlay loop muted className="functions__video" poster="/images/videoPreview/profileSwipesPreview.png" preload="auto">
+                            <video key={curValue.video} autoPlay loop muted className="functions__video" poster={curValue.preview} preload="auto">
                                 <source src={curValue.video} type="video/mp4" />
                                 {t("errorVideo")}
                             </video>

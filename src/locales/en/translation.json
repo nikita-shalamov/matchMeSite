@@ -51,7 +51,8 @@
           "Upload up to 9 photos.",
           "Support for all popular formats."
       ],
-      "video": "/videos/addTelegramPhoto.mp4"
+      "video": "/videos/addTelegramPhoto.mp4",
+      "preview": "/images/videoPreview/addTelegramPhotoPreview.png"
   },
   {
       "title": "Chats in the App",
@@ -60,7 +61,8 @@
           "Chat with users with whom you've matched directly in the app.",
           "Receive new messages in the bot."
       ],
-      "video": "/videos/sendMessage.mp4"
+      "video": "/videos/sendMessage.mp4",
+      "preview": "/images/videoPreview/profileSwipesPreview.png"
   },
   {
       "title": "Profile Swipes",
@@ -69,7 +71,8 @@
           "Easily swipe through profiles — swipe right to like, swipe left to skip.",
           "While swiping through profiles, you can immediately see photos, age, and brief information about the person."
       ],
-      "video": "/videos/profileSwipes.mp4"
+      "video": "/videos/profileSwipes.mp4",
+      "preview": "/images/videoPreview/myLikesPreview.png"
   },
   {
       "title": "View Likes",
@@ -79,7 +82,8 @@
           "View mutual likes in chats. You can write immediately there.",
           "In the bottom menu, new likes will be displayed as notifications."
       ],
-      "video": "/videos/myLikes.mp4"
+      "video": "/videos/myLikes.mp4",
+      "preview": "/images/videoPreview/sendMessagePreview.png"
   }
 ],
   "errorVideo": "Your browser does not support video.",
