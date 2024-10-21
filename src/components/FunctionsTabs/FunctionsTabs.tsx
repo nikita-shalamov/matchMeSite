@@ -84,7 +84,7 @@ const FunctionsTabs = () => {
                 <div className="functions__items-block">
                     <div className="functions__video-wrapper">
                         {curValue && curValue.video && (
-                            <video key={curValue.video} autoPlay loop muted className="functions__video" preload="auto">
+                            <video key={curValue.video} autoPlay loop muted className="functions__video" poster="/images/videoPreview/profileSwipesPreview.png" preload="auto">
                                 <source src={curValue.video} type="video/mp4" />
                                 {t("errorVideo")}
                             </video>
