@@ -1,6 +1,5 @@
 import { Tabs, Tab } from "@nextui-org/react";
 import { Key, useEffect, useMemo, useState } from "react";
-import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 interface tabsTypes {
@@ -85,18 +84,10 @@ const FunctionsTabs = () => {
                 <div className="functions__items-block">
                     <div className="functions__video-wrapper">
                         {curValue && curValue.video && (
-                            <motion.div
-                                key={curValue.video} // Используйте ключ для перерисовки
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                exit={{ opacity: 0, scale: 0.5 }} // Анимация выхода
-                                transition={{ duration: 0.4 }}
-                            >
-                                <video autoPlay loop muted className="functions__video">
-                                    <source src={curValue.video} type="video/mp4" />
-                                    {t("errorVideo")}
-                                </video>
-                            </motion.div>
+                            <video key={curValue.video} autoPlay loop muted className="functions__video">
+                                <source src={curValue.video} type="video/mp4" />
+                                {t("errorVideo")}
+                            </video>
                         )}
                     </div>
                 </div>

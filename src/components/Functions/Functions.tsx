@@ -2,7 +2,6 @@ import React from "react";
 import FunctionsTabs from "../FunctionsTabs/FunctionsTabs";
 import { useTranslation } from "react-i18next";
 
-// Мемоизация компонента Functions
 const Functions = React.memo(() => {
     const { t } = useTranslation();
     return (
