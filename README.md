@@ -1,50 +1,38 @@
-# React + TypeScript + Vite
+# Маркетинговый сайт MatchMe - аналог тиндера в Telegram Web App 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MatchMe (https://matchmesite.ru) - это TG Web App для знакомств с регистрацией по Telegram ID. Сделан по аналогии с Тиндером / VK Знакомства. \
+Внутри приложение есть страница регистрации (данные о юзере и фотографии), просмотр анкет со свайпами, мои лайки, чаты, настройки).
 
-Currently, two official plugins are available:
+## 🌐 Ссылка на проект
+[Код клиента](https://github.com/nikita-shalamov/matchme-client) \
+[Код сервера](https://github.com/nikita-shalamov/matchme-server) \
+[Бот в телеграм](https://t.me/MatchMeDatingbot) — нажмите, чтобы посмотреть проект в действии.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Использованные технологии
 
-## Expanding the ESLint configuration
+- **Frontend:** React, TypeScript, SCSS, Tailwind, Framer Motion, Next UI, i18n
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🚀 Как запустить
 
-- Configure the top-level `parserOptions` property like this:
+Следуйте этим шагам, чтобы запустить проект локально:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Клонируйте репозиторий:
+   
+   ```bash
+   git clone https://github.com/nikita-shalamov/matchMeSite.git
+   ```
+2. Перейдите в папку проекта:
+   
+   ```bash
+   cd project
+   ```
+3. Установите зависимости:
+   
+   ```bash
+   npm install
+   ```
+4. Запустите проект
+   
+   ```bash
+   npm run dev
+   ```
